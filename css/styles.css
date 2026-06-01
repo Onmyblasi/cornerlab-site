@@ -1,0 +1,449 @@
+/* Typography Engine Imports */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap');
+
+:root {
+    /* Color System Archetype (Matte Dark Matte Slate Palette) */
+    --bg-primary: #101010;
+    --bg-secondary: #1A1A1A;
+    --bg-tertiary: #202020;
+    
+    --text-primary: #F2F2F2;
+    --text-secondary: #B3B3B3;
+    --text-muted: #7e7e7e;
+    
+    /* Font Hierarchies */
+    --font-sans: "Archivo Narrow", sans-serif;
+    --font-serif: "Newsreader", serif;
+    --font-mono: "JetBrains Mono", monospace;
+    
+    --grid-gap: 2rem;
+}
+
+/* Global Reset Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-sans);
+    padding: 4rem 4rem 2rem 4rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar System */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--bg-tertiary); }
+
+/* Anchor Tags Framework */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ------------------------------------------------------------- */
+/* Header / Branding System */
+/* ------------------------------------------------------------- */
+.global-branding {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+
+.global-branding .logo {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+    font-style: italic;
+}
+
+/* ------------------------------------------------------------- */
+/* Hero Manifesto & Unified Navigation Bar */
+/* ------------------------------------------------------------- */
+.hero-manifesto {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(85vh - 12rem);
+    justify-content: flex-start;
+    margin-bottom: 5rem;
+}
+
+.manifesto-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.manifesto-titles h1 {
+    font-family: var(--font-sans);
+    font-size: clamp(3rem, 6.5vw, 7rem);
+    font-weight: 300;
+    line-height: 0.90;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+/* Responsive Single Line Editorial Bar Structure */
+.editorial-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--text-muted);
+    padding-top: 1.5rem;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.social-link:hover .social-icon {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.75;
+    filter: brightness(0) saturate(100%) invert(82%);
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.social-link:hover .social-icon {
+    opacity: 1;
+    transform: translateY(-1px);
+    filter: brightness(0) saturate(100%) invert(96%);
+}
+
+.nav-left a, .nav-right a, .lang-selector {
+    color: var(--text-secondary);
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    color: var(--text-primary);
+}
+
+.lang-selector {
+    cursor: pointer;
+}
+
+.lang-selector .active {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------------- */
+/* Section Scaffolding Layouts */
+/* ------------------------------------------------------------- */
+.editorial-section {
+    padding: 6rem 0;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--grid-gap);
+}
+
+.section-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid var(--bg-tertiary);
+    margin: 0;
+}
+
+/* Typography Editorial Copy blocks */
+.editorial-prose .lead-text {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    line-height: 1.3;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 2.5rem;
+}
+
+.editorial-prose .body-text {
+    font-family: var(--font-serif);
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 42rem;
+}
+
+.editorial-prose .highlight {
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--text-muted);
+}
+
+/* Section 2 Details: Bio Grid & Placeholders */
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.lab-image-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.placeholder-graphic {
+    width: 50%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--bg-secondary);
+    border: 1px dashed var(--text-muted);
+}
+
+.lab-image-placeholder .caption {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+}
+
+/* ------------------------------------------------------------- */
+/* Section 3 Details: Laboratory Work Architecture */
+/* ------------------------------------------------------------- */
+.work-archive {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: 66.66%;
+}
+
+.work-item {
+    border-bottom: 1px solid var(--bg-tertiary);
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.work-item:first-of-type {
+    padding-top: 0;
+}
+
+.work-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.work-id {
+    color: var(--text-muted);
+}
+
+.work-status {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.work-title {
+    font-family: var(--font-sans);
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.work-desc {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    max-width: 38rem;
+}
+
+/* ------------------------------------------------------------- */
+/* Section 4 Details: Laboratory Notes Row Systems */
+/* ------------------------------------------------------------- */
+.notes-archive {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--bg-tertiary);
+}
+
+.note-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--bg-tertiary);
+    align-items: center;
+    transition: background-color 0.15s ease;
+}
+
+.note-row:hover {
+    background-color: var(--bg-secondary);
+}
+
+.note-index {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding-left: 1rem;
+}
+
+.note-heading {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.note-action {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: right;
+    padding-right: 1rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+}
+
+.note-row:hover .note-action {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fallback classes for noscript */
+.note-row-fallback a {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+/* ------------------------------------------------------------- */
+/* Section 5 Details: Connect System */
+/* ------------------------------------------------------------- */
+.connectivity-block .query-prompt {
+    margin-bottom: 3rem;
+}
+
+.connect-channels {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.channel-link {
+    font-family: var(--font-sans);
+    font-size: 1.75rem;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+}
+
+.channel-link::after {
+    content: " →";
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateX(-5px);
+    display: inline-block;
+}
+
+.channel-link:hover {
+    color: var(--text-primary);
+}
+
+.channel-link:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* ------------------------------------------------------------- */
+/* Global System Footer Architecture */
+/* ------------------------------------------------------------- */
+.global-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--bg-tertiary);
+    padding-top: 3rem;
+    margin-top: 8rem;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+}
+
+.footer-brand {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* ------------------------------------------------------------- */
+/* Media Processing Units (Responsive Breakpoints) */
+/* ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    body { padding: 3rem 2rem 2rem 2rem; }
+    .editorial-nav { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .nav-right { width: 100%; justify-content: space-between; border-top: 1px solid var(--bg-tertiary); padding-top: 1rem; }
+    .section-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .bio-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .work-archive { width: 100%; }
+    .note-row { grid-template-columns: 0.5fr 2fr; }
+    .note-action { display: none; }
+}
+
+@media (max-width: 640px) {
+    body { padding: 2rem 1.25rem 1.25rem 1.25rem; }
+    .global-branding { margin-bottom: 4rem; }
+    .hero-manifesto { min-height: auto; margin-bottom: 6rem; }
+    .nav-left { flex-wrap: wrap; gap: 1rem 1.5rem; }
+    .note-row { grid-template-columns: 1fr; gap: 0.25rem; padding: 1.25rem 0; }
+    .note-index { padding-left: 0; }
+    .global-footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}

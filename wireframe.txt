@@ -1,0 +1,69 @@
+------------------------------------------------
+LOGO: CornerLab
+
+                CORNERLAB
+
+Creativity, experimentation & research.
+
+A digital lab exploring neuroscience,
+psychology, systems, technology and
+creative experiments.
+
+[ Explore Lab Notes ]
+[ View Experiments ]
+
+Neuroscience / Psychology / AI / Data
+------------------------------------------------
+
+
+THE LAB
+
+A space for ideas, prototypes and research.
+
+[ Experiment / 001 ]
+Small cognitive visualization tool
+
+[ Experiment / 002 ]
+Behavior analysis dashboard
+
+[ Experiment / 003 ]
+Cross-platform app prototype
+
+------------------------------------------------
+
+
+LAB NOTES
+
+Notes, experiments and findings.
+
+#001 — Building systems for better thinking
+#002 — Attention as a scarce resource
+#003 — The psychology of habits
+#004 — Why experimentation matters
+
+[ View all notes ]
+
+------------------------------------------------
+
+
+3 PRINCIPLES
+
+Creativity
+Building ideas and interfaces.
+
+Experimentation
+Testing hypotheses.
+
+Research
+Understanding systems and behavior.
+
+------------------------------------------------
+
+
+Footer
+
+CornerLab
+Built around curiosity.
+
+GitHub / Email
+------------------------------------------------
