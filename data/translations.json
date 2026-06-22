@@ -1,0 +1,42 @@
+{
+  "en": {
+    "creativity": "CREATIVITY",
+    "experimentation": "EXPERIMENTATION",
+    "exploration": "EXPLORATION",
+    "nav_what_is": "What is",
+    "nav_whos_behind": "Who's Behind",
+    "nav_lab_work": "Lab Work",
+    "nav_lab_notes": "Lab Notes",
+    "nav_connect": "Connect",
+    "section_what_is": "What is",
+    "section_whos_behind": "Who's Behind",
+    "section_lab_work": "Lab Work",
+    "section_lab_notes": "Lab Notes",
+    "section_connect": "Connect",
+    "what_is_lead": "CornerLab is a personal digital lab where <span class=\"highlight\">creativity</span>, <span class=\"highlight\">experimentation</span> and <span class=\"highlight\">research</span> converge.",
+    "what_is_body": "A dedicated, non-linear space to explore neuroscience, psychology, technology, systems design, and human behavior through active projects, formal writing, and continuous architectural inquiry.",
+    "whos_behind_body": "I built CornerLab as an intentional ecosystem to think, research, and create. This space operates exclusively at the intersections of cognitive neuroscience, psychology, systems thinking, and custom creative technology infrastructure.",
+    "connect_prompt": "Open to ideas, deep collaborative research, and critical conversations.",
+    "footer_manifesto": "Creativity — Experimentation — Research"
+  },
+  "es": {
+    "creativity": "CREATIVIDAD",
+    "experimentation": "EXPERIMENTACIÓN",
+    "exploration": "EXPLORACIÓN",
+    "nav_what_is": "Qué es",
+    "nav_whos_behind": "Quién hay detrás",
+    "nav_lab_work": "Trabajo de laboratorio",
+    "nav_lab_notes": "Notas de laboratorio",
+    "nav_connect": "Contacto",
+    "section_what_is": "Qué es",
+    "section_whos_behind": "Quién hay detrás",
+    "section_lab_work": "Trabajo de laboratorio",
+    "section_lab_notes": "Notas de laboratorio",
+    "section_connect": "Contacto",
+    "what_is_lead": "CornerLab es un laboratorio digital personal donde <span class=\"highlight\">creatividad</span>, <span class=\"highlight\">experimentación</span> e <span class=\"highlight\">investigación</span> convergen.",
+    "what_is_body": "Un espacio no lineal dedicado a explorar neurociencia, psicología, tecnología, diseño de sistemas y comportamiento humano a través de proyectos activos, escritura formal e investigación arquitectónica continua.",
+    "whos_behind_body": "Construí CornerLab como un ecosistema intencional para pensar, investigar y crear. Este espacio opera exclusivamente en las intersecciones de la neurociencia cognitiva, la psicología, el pensamiento sistémico y la infraestructura tecnológica creativa.",
+    "connect_prompt": "Abierta a ideas, investigación colaborativa profunda y conversaciones críticas.",
+    "footer_manifesto": "Creatividad — Experimentación — Investigación"
+  }
+}

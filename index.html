@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CornerLab° — Personal Digital Lab</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
 
@@ -14,21 +15,21 @@
 
     <section class="hero-manifesto">
         <div class="manifesto-titles">
-            <h1>CREATIVIDAD</h1>
-            <h1>EXPERIMENTACIÓN</h1>
-            <h1>INVESTIGACIÓN</h1>
+            <h1 data-i18n="creativity">CREATIVITY</h1>
+            <h1 data-i18n="experimentation">EXPERIMENTATION</h1>
+            <h1 data-i18n="exploration">EXPLORATION</h1>
         </div>
 
         <nav class="editorial-nav">
             <div class="nav-left">
-                <a href="#what-is">What is</a>
-                <a href="#whos-behind">Who's Behind</a>
-                <a href="#lab-work">Lab Work</a>
-                <a href="#lab-notes">Lab Notes</a>
-                <a href="#connect">Connect</a>
+                <a href="#what-is" data-i18n="nav_what_is">What is</a>
+                <a href="#whos-behind" data-i18n="nav_whos_behind">Who's Behind</a>
+                <a href="#lab-work" data-i18n="nav_lab_work">Lab Work</a>
+                <a href="#lab-notes" data-i18n="nav_lab_notes">Lab Notes</a>
+                <a href="#connect" data-i18n="nav_connect">Connect</a>
             </div>
             <div class="nav-right">
-                <span class="lang-selector"><span class="active">EN</span>/<span>ES</span></span>
+                <span class="lang-selector"><span class="active" data-lang="en">EN</span>/<span data-lang="es">ES</span></span>
             
                 <a href="https://github.com/Onmyblasi" 
                     target="_blank" 
@@ -54,24 +55,22 @@
     </section>
 
     <section id="what-is" class="editorial-section section-grid">
-        <h2 class="section-title">What is</h2>
+        <h2 class="section-title" data-i18n="section_what_is">What is</h2>
         <div class="section-content editorial-prose">
-            <p class="lead-text">
+            <p class="lead-text" data-i18n="what_is_lead">
                 CornerLab is a personal digital lab where <span class="highlight">creativity</span>, <span class="highlight">experimentation</span> and <span class="highlight">research</span> converge.
             </p>
-            <p class="body-text">
+            <p class="body-text" data-i18n="what_is_body">
                 A dedicated, non-linear space to explore neuroscience, psychology, technology, systems design, and human behavior through active projects, formal writing, and continuous architectural inquiry.
             </p>
         </div>
     </section>
 
-    <hr class="section-divider">
-
     <section id="whos-behind" class="editorial-section section-grid">
-        <h2 class="section-title">Who's Behind</h2>
+        <h2 class="section-title" data-i18n="section_whos_behind">Who's Behind</h2>
         <div class="section-content bio-grid">
             <div class="editorial-prose">
-                <p class="body-text">
+                <p class="body-text" data-i18n="whos_behind_body">
                     I built CornerLab as an intentional ecosystem to think, research, and create. This space operates exclusively at the intersections of cognitive neuroscience, psychology, systems thinking, and custom creative technology infrastructure. 
                 </p>
             </div>
@@ -82,10 +81,8 @@
         </div>
     </section>
 
-    <hr class="section-divider">
-
     <section id="lab-work" class="editorial-section">
-        <h2 class="section-title">Lab Work</h2>
+        <h2 class="section-title" data-i18n="section_lab_work">Lab Work</h2>
         <div class="work-archive">
             
             <article class="work-item">
@@ -113,10 +110,8 @@
         </div>
     </section>
 
-    <hr class="section-divider">
-
     <section id="lab-notes" class="editorial-section">
-        <h2 class="section-title">Lab Notes</h2>
+        <h2 class="section-title" data-i18n="section_lab_notes">Lab Notes</h2>
         <div id="dynamic-notes-target" class="notes-archive">
             <noscript>
                 <div class="note-row-fallback">
@@ -128,12 +123,10 @@
         </div>
     </section>
 
-    <hr class="section-divider">
-
     <section id="connect" class="editorial-section section-grid">
-        <h2 class="section-title">Connect</h2>
+        <h2 class="section-title" data-i18n="section_connect">Connect</h2>
         <div class="section-content connectivity-block">
-            <p class="body-text query-prompt">Open to ideas, deep collaborative research, and critical conversations.</p>
+            <p class="body-text query-prompt" data-i18n="connect_prompt">Open to ideas, deep collaborative research, and critical conversations.</p>
             <ul class="connect-channels">
                 <li><a href="mailto:hello@cornerlab.org" class="channel-link">Email</a></li>
                 <li><a href="https://github.com" target="_blank" rel="noopener" class="channel-link">GitHub</a></li>
@@ -142,9 +135,9 @@
         </div>
     </section>
 
-    <footer class="global-footer">
+    <footer class="global-footer" >
         <span class="footer-brand">CornerLab°</span>
-        <span class="footer-manifesto">Creativity — Experimentation — Research</span>
+        <span class="footer-manifesto" data-i18n="footer_manifesto>Creativity — Experimentation — Experimentation</span>
     </footer>
 
     <script src="js/main.js"></script>

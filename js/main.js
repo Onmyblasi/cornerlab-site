@@ -1,9 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Core Operations
-    ArchiveManager.init();
-    InteractionEngine.init();
-});
-
 /**
  * Handle dynamic asset processing and DOM rendering
  */
@@ -51,18 +45,52 @@ const ArchiveManager = {
  * Modular Client UX Behavior Management
  */
 const InteractionEngine = {
-    init() {
+    translations: null,
+    currentLang: 'en',
+
+    async init() {
+        await this.loadTranslations();
         this.processLanguageToggles();
+    },
+
+    async loadTranslations() {
+        try {
+            const response = await fetch('./data/translations.json');
+            this.translations = await response.json();
+        } catch (error) {
+            console.error('Translation pipeline failure:', error);
+        }
     },
 
     processLanguageToggles() {
         const selectors = document.querySelectorAll('.lang-selector span');
         selectors.forEach(span => {
             span.addEventListener('click', (e) => {
+                const lang = e.target.dataset.lang;
+                if (!lang) return;
+                if (lang === this.currentLang) return;
+
                 selectors.forEach(s => s.classList.remove('active'));
                 e.target.classList.add('active');
-                // Extended internationalization systems hook inside execution framework here if required later
+
+                this.applyTranslations(lang);
+                this.currentLang = lang;
             });
+        });
+    },
+
+    applyTranslations(lang) {
+        if (!this.translations || !this.translations[lang]) return;
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            const value = this.translations[lang][key];
+            if (value) el.innerHTML = value;
         });
     }
 };
+
+document.addEventListener('DOMContentLoaded', async () => {
+    ArchiveManager.init();
+    await InteractionEngine.init();
+});
