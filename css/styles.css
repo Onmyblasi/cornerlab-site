@@ -238,7 +238,7 @@ a {
     width: 50%;
     aspect-ratio: 4 / 3;
     background-color: var(--bg-secondary);
-    border: 1px dashed var(--text-muted);
+    /*border: 1px dashed var(--text-muted);*/
 }
 
 .placeholder-graphic img {
@@ -466,7 +466,7 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.editorial-section .section-title 
+.editorial-section .section-title, 
 .editorial-section .editorial-prose .lead-text { color: #1A1A1A; }
 .editorial-section .editorial-prose .body-text { color: #555; font-weight: 500; }
 .editorial-section .editorial-prose .highlight { color: #1A1A1A; /*border-bottom-color: #aaa;*/ font-weight: 400; }
