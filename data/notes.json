@@ -2,16 +2,19 @@
   {
     "id": "LAB NOTE / 001",
     "title": "Building Systems for Better Thinking",
-    "slug": "building-systems-for-better-thinking.html"
+    "slug": "building-systems-for-better-thinking.html",
+    "published": false
   },
   {
     "id": "LAB NOTE / 002",
     "title": "The Psychology of Attention",
-    "slug": "psychology-of-attention.html"
+    "slug": "psychology-of-attention.html",
+    "published": false
   },
   {
     "id": "LAB NOTE / 003",
     "title": "Patterns in Human Behavior",
-    "slug": "patterns-in-human-behavior.html"
+    "slug": "patterns-in-human-behavior.html",
+    "published": false
   }
 ]

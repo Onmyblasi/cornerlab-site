@@ -25,7 +25,14 @@ const ArchiveManager = {
         // Clear SSR or fallback elements safely
         mountPoint.innerHTML = '';
 
-        items.forEach(item => {
+        const visibles = items.filter(item => item.published);
+
+        if (!visibles.length) {
+            mountPoint.innerHTML = `<p style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); padding:2rem 0;">First entries coming soon.</p>`;
+            return;
+        }
+
+        visibles.forEach(item => {
             const anchor = document.createElement('a');
             anchor.href = `lab/${item.slug}`;
             anchor.className = 'note-row';
