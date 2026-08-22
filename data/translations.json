@@ -32,7 +32,11 @@
     "ph_subject": "What is this about?",
     "ph_message": "Your message...",
     "page_title": "CornerLab — Personal Digital Lab",
-    "brand_tagline": "Digital lab by Yasira"
+    "brand_tagline": "Digital lab by Yasira",
+    "what_is_body_p1": "CornerLab is a digital space where I let myself create, research and experiment with different technologies across scientific fields: psychology, neuroscience, zoology, and anything else worth exploring.",
+    "what_is_body_p2": "Most of my work circles back to human behaviour, either directly or through interactive, visual and educational tools.",
+    "what_is_body_p3": "Building tools that are actually worth something means testing, breaking, rebuilding, and not giving up.",
+    "what_is_body_p4": "That's why I built this lab."
   },
   "es": {
     "creativity": "CREATIVIDAD",
@@ -67,6 +71,10 @@
     "ph_subject": "¿Sobre qué quieres escribir?",
     "ph_message": "Tu mensaje...",
     "page_title": "CornerLab — Laboratorio digital personal",
-    "brand_tagline": "Laboratorio digital · Yasira"
+    "brand_tagline": "Laboratorio digital · Yasira",
+    "what_is_body_p1": "CornerLab es un espacio digital donde me permito crear, investigar y experimentar con distintas tecnologías en ámbitos científicos: psicología, neurociencia, zoología y cualquier otro que merezca la pena explorar.",
+    "what_is_body_p2": "La mayoría de mis trabajos giran en torno al comportamiento humano, de manera directa o a través de herramientas interactivas, visuales y educativas.",
+    "what_is_body_p3": "Para construir herramientas que generen valor, hay que probar, romper, rehacer y no decaer.",
+    "what_is_body_p4": "Para ello he creado este laboratorio."
   }
 }

@@ -1014,3 +1014,7 @@ a {
     text-transform: uppercase;
     color: var(--text-muted);
 }
+
+.editorial-prose .body-text + .body-text {
+    margin-top: 1.5rem;
+}
