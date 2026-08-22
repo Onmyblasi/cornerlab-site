@@ -31,7 +31,8 @@
     "ph_email": "example@domain.com",
     "ph_subject": "What is this about?",
     "ph_message": "Your message...",
-    "page_title": "CornerLab — Personal Digital Lab"
+    "page_title": "CornerLab — Personal Digital Lab",
+    "brand_tagline": "Digital lab by Yasira"
   },
   "es": {
     "creativity": "CREATIVIDAD",
@@ -65,6 +66,7 @@
     "ph_email": "ejemplo@dominio.com",
     "ph_subject": "¿Sobre qué quieres escribir?",
     "ph_message": "Tu mensaje...",
-    "page_title": "CornerLab — Laboratorio digital personal"
+    "page_title": "CornerLab — Laboratorio digital personal",
+    "brand_tagline": "Laboratorio digital · Yasira"
   }
 }
