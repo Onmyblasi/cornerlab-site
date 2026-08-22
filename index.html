@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CornerLab — Personal Digital Lab</title>
+    <title data-i18n="page_title">CornerLab — Personal Digital Lab</title>
     <meta name="description" content="Personal digital lab by Yasira Blanco Moreno. Data projects in health, behaviour and technology.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CornerLab — Personal Digital Lab">
@@ -62,7 +62,13 @@
     </div>
 
         <nav class="editorial-nav">
-            <!-- déjalo tal cual está ahora -->
+            <ul class="nav-list">
+                <li><a href="#what-is" data-i18n="nav_what_is">What is</a></li>
+                <li><a href="#whos-behind" data-i18n="nav_whos_behind">Who's Behind</a></li>
+                <li><a href="#lab-work" data-i18n="nav_lab_work">Lab Work</a></li>
+                <li><a href="#lab-notes" data-i18n="nav_lab_notes">Lab Notes</a></li>
+                <li><a href="#connect" data-i18n="nav_connect">Connect</a></li>
+            </ul>
         </nav>
     </section>
 
@@ -137,13 +143,54 @@
 
     <section id="connect" class="editorial-section section-grid">
         <h2 class="section-title" data-i18n="section_connect">Connect</h2>
+
         <div class="section-content connectivity-block">
             <p class="body-text query-prompt" data-i18n="connect_prompt">Open to ideas, deep collaborative research, and critical conversations.</p>
+
+            <form class="contact-form" id="contact-form"
+                action="https://api.simplyforms.app/v1/forms/MANGToXFLvuVxXwoESXIXw"
+                method="POST">
+
+                <div class="hp-field" aria-hidden="true">
+                    <label for="website_url">Your website</label>
+                    <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+                </div>
+
+                <div class="form-field">
+                    <label for="full_name" data-i18n="form_name">Full name</label>
+                    <input type="text" id="full_name" name="full_name" autocomplete="name" placeholder="Your full name" data-i18n-placeholder="ph_name">
+                </div>
+
+                <div class="form-field">
+                    <label for="email" data-i18n="form_email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="example@domain.com" data-i18n-placeholder="ph_email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="subject" data-i18n="form_subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is this about?" data-i18n-placeholder="ph_subject">
+                </div>
+
+                <div class="form-field">
+                    <label for="message" data-i18n="form_message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your message..." required data-i18n-placeholder="ph_message"></textarea>
+                </div>
+
+                <div class="form-consent">
+                    <input type="checkbox" id="privacy" name="privacy" value="accepted" required>
+                    <label for="privacy" data-i18n="form_privacy">
+                        I have read and accept the <a href="privacy.html" data-i18n-href='{"en":"privacy.html","es":"privacidad.html"}'>privacy policy</a>.
+                    </label>
+                </div>
+
+                <button type="submit" class="form-submit" data-i18n="form_send">Send message</button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+
             <ul class="connect-channels">
-                <li><a href="mailto:hello@cornerlab.org" class="channel-link">Email</a></li>
-                <li><a href="https://github.com" target="_blank" rel="noopener" class="channel-link">GitHub</a></li>
-                <li><a href="https://linkedin.com" target="_blank" rel="noopener" class="channel-link">LinkedIn</a></li>            
-             </ul>
+                <li><a href="https://github.com/Onmyblasi" target="_blank" rel="noopener" class="channel-link">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/yasira-blanco-moreno/" target="_blank" rel="noopener" class="channel-link">LinkedIn</a></li>
+            </ul>
         </div>
     </section>
 

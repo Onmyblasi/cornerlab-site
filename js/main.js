@@ -58,6 +58,16 @@ const InteractionEngine = {
     async init() {
         await this.loadTranslations();
         this.processLanguageToggles();
+
+        const saved = localStorage.getItem('cornerlab-lang');
+        if (saved && saved !== this.currentLang) {
+            this.applyTranslations(saved);
+            this.currentLang = saved;
+
+            document.querySelectorAll('.lang-selector span').forEach(s => {
+                s.classList.toggle('active', s.dataset.lang === saved);
+            });
+        }
     },
 
     async loadTranslations() {
@@ -89,15 +99,71 @@ const InteractionEngine = {
     applyTranslations(lang) {
         if (!this.translations || !this.translations[lang]) return;
 
+        document.documentElement.lang = lang;
+        localStorage.setItem('cornerlab-lang', lang);
+
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.dataset.i18n;
             const value = this.translations[lang][key];
             if (value) el.innerHTML = value;
+        });
+
+        document.querySelectorAll('[data-i18n-href]').forEach(el => {
+            const map = JSON.parse(el.dataset.i18nHref);
+            if (map[lang]) el.href = map[lang];
+        });
+    }
+};
+
+const ContactForm = {
+    endpoint: 'https://api.simplyforms.app/v1/forms/MANGToXFLvuVxXwoESXIXw',
+
+    init() {
+        const form = document.querySelector('#contact-form');
+        if (!form) return;
+        const status = document.querySelector('#form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Honeypot: si viene relleno, es un bot. Fingimos éxito y no enviamos.
+            if (form.website_url.value !== '') {
+                status.textContent = 'Message sent. Thank you!';
+                form.reset();
+                return;
+            }
+
+            const button = form.querySelector('button[type="submit"]');
+            button.disabled = true;
+            status.textContent = 'Sending...';
+
+            const data = new FormData(form);
+            data.delete('website_url');
+
+            try {
+                const response = await fetch(this.endpoint, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (!response.ok) throw new Error(`Status ${response.status}`);
+
+                status.textContent = 'Message sent. Thank you!';
+                form.reset();
+            } catch (error) {
+                console.error('Form submission failed:', error);
+                status.textContent = 'Something went wrong. Please write to contact@cornerlab.me instead.';
+            } finally {
+                button.disabled = false;
+            }
         });
     }
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
     ArchiveManager.init();
+    ContactForm.init();
     await InteractionEngine.init();
 });
+

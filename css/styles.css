@@ -601,3 +601,306 @@ a {
     justify-self: end;
     width: 100%;
 }
+
+/* ------------------------------------------------------------- */
+/* Connect: contact form                                          */
+/* ------------------------------------------------------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 34rem;
+    margin-bottom: 3.5rem;
+}
+
+/* Honeypot: fuera de pantalla, no display:none */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: #1A1A1A;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #c4c4c4;
+    padding: 0.6rem 0;
+    width: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: #aaa; }
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-bottom-color: #1A1A1A;
+}
+
+.contact-form textarea { resize: vertical; }
+
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.form-consent input[type="checkbox"] {
+    margin-top: 0.25rem;
+    accent-color: #1A1A1A;
+    flex-shrink: 0;
+}
+
+.form-consent label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+.form-consent a {
+    color: #1A1A1A;
+    border-bottom: 1px solid #aaa;
+}
+
+.form-submit {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ECECEC;
+    background: #1A1A1A;
+    border: 1px solid #1A1A1A;
+    border-radius: 3px;
+    padding: 0.85rem 1.75rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.form-submit:hover {
+    background: transparent;
+    color: #1A1A1A;
+}
+
+/* ------------------------------------------------------------- */
+/* Connect: ajustes de composición                                */
+/* ------------------------------------------------------------- */
+
+/* 1. Bajar el bloque y centrarlo dentro de su columna */
+#connect .connectivity-block {
+    margin-top: 5rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* 2. Campos más anchos: el formulario ocupa todo el bloque */
+#connect .contact-form {
+    max-width: 100%;
+}
+
+/* 3. Botón centrado */
+#connect .form-submit {
+    align-self: center;
+}
+
+/* 4. GitHub y LinkedIn en línea */
+#connect .connect-channels {
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+/* Ajuste móvil: sin el hueco superior grande */
+@media (max-width: 1024px) {
+    #connect .connectivity-block { margin-top: 2rem; }
+}
+
+@media (max-width: 640px) {
+    #connect .connect-channels { gap: 1.5rem; }
+}
+
+/* ------------------------------------------------------------- */
+/* Connect: composición centrada                                  */
+/* ------------------------------------------------------------- */
+
+/* Anula el grid de dos columnas solo en esta sección */
+#connect {
+    display: block;
+}
+
+#connect .section-title {
+    margin-bottom: 5rem;
+}
+
+#connect .connectivity-block {
+    max-width: 42rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#connect .query-prompt {
+    text-align: center;
+}
+
+#connect .contact-form {
+    max-width: 100%;
+}
+
+#connect .form-submit {
+    align-self: center;
+}
+
+#connect .connect-channels {
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    #connect .section-title { margin-bottom: 3rem; }
+    #connect .connect-channels { gap: 1.5rem; }
+}
+
+/* ------------------------------------------------------------- */
+/* Legal pages (privacy.html / privacidad.html)                    */
+/* Añadir al final de css/styles.css                               */
+/* ------------------------------------------------------------- */
+
+.legal-page {
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.legal-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.legal-title {
+    font-family: var(--font-sans);
+    font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #1A1A1A;
+}
+
+.legal-lang {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.legal-lang a {
+    color: #777;
+    border-bottom: 1px solid #ccc;
+}
+
+.legal-lang a:hover {
+    color: #1A1A1A;
+    border-bottom-color: #1A1A1A;
+}
+
+.legal-body .legal-intro {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #1A1A1A;
+    margin-bottom: 3rem;
+}
+
+.legal-body h2 {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #777;
+    margin-top: 2.75rem;
+    margin-bottom: 0.9rem;
+}
+
+.legal-body p {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.legal-body strong {
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.legal-body a {
+    color: #1A1A1A;
+    border-bottom: 1px solid #bbb;
+}
+
+.legal-body a:hover {
+    border-bottom-color: #1A1A1A;
+}
+
+.legal-date {
+    font-family: var(--font-mono) !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.08em;
+    color: #999 !important;
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.legal-back {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+
+.legal-back a {
+    color: #777;
+}
+
+.legal-back a:hover {
+    color: #1A1A1A;
+}
+
+@media (max-width: 640px) {
+    .legal-head { margin-bottom: 2rem; }
+    .legal-body .legal-intro { font-size: 1.1rem; margin-bottom: 2rem; }
+}
