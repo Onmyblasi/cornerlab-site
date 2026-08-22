@@ -128,6 +128,7 @@ const ContactForm = {
 
             // Honeypot: si viene relleno, es un bot. Fingimos éxito y no enviamos.
             if (form.website_url.value !== '') {
+                status.classList.remove('is-error');
                 status.textContent = 'Message sent. Thank you!';
                 form.reset();
                 return;
@@ -149,10 +150,12 @@ const ContactForm = {
 
                 if (!response.ok) throw new Error(`Status ${response.status}`);
 
+                status.classList.remove('is-error');
                 status.textContent = 'Message sent. Thank you!';
                 form.reset();
             } catch (error) {
                 console.error('Form submission failed:', error);
+                status.classList.add('is-error');
                 status.textContent = 'Something went wrong. Please write to contact@cornerlab.me instead.';
             } finally {
                 button.disabled = false;
