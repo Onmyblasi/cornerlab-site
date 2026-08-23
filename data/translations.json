@@ -35,7 +35,9 @@
     "what_is_body_p3": "Building tools that are actually worth something means testing, breaking, rebuilding, and not giving up.",
     "what_is_body_p4": "That's why I built this lab.",
     "whos_behind_p1": "My name is Yasira. I'm a data analyst and developer with an interest in the natural sciences and human behaviour.",
-    "whos_behind_p2": "What drives me most is building tools that improve people's wellbeing. That's the idea behind <a href=\"https://e-motions.es\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">E·Motions</a>, which was runner-up at the AJE Málaga 2026 awards in the Entrepreneurial Initiative category."
+    "whos_behind_p2": "What drives me most is building tools that improve people's wellbeing. That's the idea behind <a href=\"https://e-motions.es\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">E·Motions</a>, which was runner-up at the AJE Málaga 2026 awards in the Entrepreneurial Initiative category.",
+    "lab_work_p1": "In this section you can take a look at finished projects and at the ones still in progress. A chance to see what's cooking in the lab: how the work is done, the technologies, the background research, the reasoning behind decisions and the parts of the process that usually stay hidden.",
+    "lab_work_p2": "If something catches your eye, <a href=\"#connect\" class=\"inline-link\">contact me</a>."
   },
   "es": {
     "creativity": "CREATIVIDAD",
@@ -73,6 +75,8 @@
     "what_is_body_p3": "Para construir herramientas que generen valor, hay que probar, romper, rehacer y no decaer.",
     "what_is_body_p4": "Para ello he creado este laboratorio.",
     "whos_behind_p1": "Mi nombre es Yasira, analista de datos y desarrolladora, con interés en las ciencias naturales y el comportamiento humano.",
-    "whos_behind_p2": "Me motiva especialmente crear herramientas que mejoren el bienestar de las personas. Con esa idea construí <a href=\"https://e-motions.es\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">E·Motions</a>, con el que quedé primera finalista en los premios AJE Málaga 2026 en la categoría de Iniciativa Emprendedora."
+    "whos_behind_p2": "Me motiva especialmente crear herramientas que mejoren el bienestar de las personas. Con esa idea construí <a href=\"https://e-motions.es\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">E·Motions</a>, con el que quedé primera finalista en los premios AJE Málaga 2026 en la categoría de Iniciativa Emprendedora.",
+    "lab_work_p1": "En este apartado puedes echar un vistazo a los proyectos terminados y a los que están en curso. Una oportunidad para ver lo que se está cociendo en el laboratorio: la metodología de trabajo, tecnologías, documentación previa, justificación de decisiones y lo que no se suele ver del proceso.",
+    "lab_work_p2": "Si algo llama tu atención, <a href=\"#connect\" class=\"inline-link\">contáctame</a>."
   }
 }

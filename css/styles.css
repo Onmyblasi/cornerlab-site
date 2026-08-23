@@ -1028,3 +1028,13 @@ a {
 .editorial-section .inline-link:hover {
     border-bottom-color: #1A1A1A;
 }
+
+.lab-work-intro {
+    width: 66.66%;
+    margin-left: auto;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .lab-work-intro { width: 100%; }
+}
