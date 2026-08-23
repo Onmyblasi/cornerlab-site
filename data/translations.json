@@ -13,9 +13,6 @@
     "section_lab_work": "Lab Work",
     "section_lab_notes": "Lab Notes",
     "section_connect": "Connect",
-    "what_is_lead": "CornerLab is a personal digital lab where <span class=\"highlight\">creativity</span>, <span class=\"highlight\">experimentation</span> and <span class=\"highlight\">research</span> converge.",
-    "what_is_body": "A dedicated, non-linear space to explore neuroscience, psychology, technology, systems design, and human behavior through active projects, formal writing, and continuous architectural inquiry.",
-    "whos_behind_body": "I built CornerLab as an intentional ecosystem to think, research, and create. This space operates exclusively at the intersections of cognitive neuroscience, psychology, systems thinking, and custom creative technology infrastructure.",
     "connect_prompt": "Open to ideas, deep collaborative research, and critical conversations.",
     "footer_manifesto": "Creativity — Experimentation — Research",
     "wc_area_lab_work": "Lab Work",
@@ -36,7 +33,9 @@
     "what_is_body_p1": "CornerLab is a digital space where I let myself create, research and experiment with different technologies across scientific fields: psychology, neuroscience, zoology, and anything else worth exploring.",
     "what_is_body_p2": "Most of my work circles back to human behaviour, either directly or through interactive, visual and educational tools.",
     "what_is_body_p3": "Building tools that are actually worth something means testing, breaking, rebuilding, and not giving up.",
-    "what_is_body_p4": "That's why I built this lab."
+    "what_is_body_p4": "That's why I built this lab.",
+    "whos_behind_p1": "My name is Yasira. I'm a data analyst and developer with an interest in the natural sciences and human behaviour.",
+    "whos_behind_p2": "What drives me most is building tools that improve people's wellbeing. That's the idea behind <a href=\"https://e-motions.es\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">E·Motions</a>, which was runner-up at the AJE Málaga 2026 awards in the Entrepreneurial Initiative category."
   },
   "es": {
     "creativity": "CREATIVIDAD",
@@ -52,9 +51,6 @@
     "section_lab_work": "Trabajo de laboratorio",
     "section_lab_notes": "Notas de laboratorio",
     "section_connect": "Contacto",
-    "what_is_lead": "CornerLab es un laboratorio digital personal donde <span class=\"highlight\">creatividad</span>, <span class=\"highlight\">experimentación</span> e <span class=\"highlight\">investigación</span> convergen.",
-    "what_is_body": "Un espacio no lineal dedicado a explorar neurociencia, psicología, tecnología, diseño de sistemas y comportamiento humano a través de proyectos activos, escritura formal e investigación arquitectónica continua.",
-    "whos_behind_body": "Construí CornerLab como un ecosistema intencional para pensar, investigar y crear. Este espacio opera exclusivamente en las intersecciones de la neurociencia cognitiva, la psicología, el pensamiento sistémico y la infraestructura tecnológica creativa.",
     "connect_prompt": "Abierta a ideas, investigación colaborativa profunda y conversaciones críticas.",
     "footer_manifesto": "Creatividad — Experimentación — Investigación",
     "wc_area_lab_work": "Trabajo de laboratorio",
@@ -75,6 +71,8 @@
     "what_is_body_p1": "CornerLab es un espacio digital donde me permito crear, investigar y experimentar con distintas tecnologías en ámbitos científicos: psicología, neurociencia, zoología y cualquier otro que merezca la pena explorar.",
     "what_is_body_p2": "La mayoría de mis trabajos giran en torno al comportamiento humano, de manera directa o a través de herramientas interactivas, visuales y educativas.",
     "what_is_body_p3": "Para construir herramientas que generen valor, hay que probar, romper, rehacer y no decaer.",
-    "what_is_body_p4": "Para ello he creado este laboratorio."
+    "what_is_body_p4": "Para ello he creado este laboratorio.",
+    "whos_behind_p1": "Mi nombre es Yasira, analista de datos y desarrolladora, con interés en las ciencias naturales y el comportamiento humano.",
+    "whos_behind_p2": "Me motiva especialmente crear herramientas que mejoren el bienestar de las personas. Con esa idea construí <a href=\"https://e-motions.es\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">E·Motions</a>, con el que quedé primera finalista en los premios AJE Málaga 2026 en la categoría de Iniciativa Emprendedora."
   }
 }

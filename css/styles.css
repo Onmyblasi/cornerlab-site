@@ -1018,3 +1018,13 @@ a {
 .editorial-prose .body-text + .body-text {
     margin-top: 1.5rem;
 }
+
+.editorial-section .inline-link {
+    color: #1A1A1A;
+    border-bottom: 1px solid #aaa;
+    transition: border-color 0.2s ease;
+}
+
+.editorial-section .inline-link:hover {
+    border-bottom-color: #1A1A1A;
+}
