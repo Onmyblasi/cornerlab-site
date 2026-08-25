@@ -43,7 +43,8 @@
     "work_status_deployed": "Deployed",
     "work_status_research": "Research in Progress",
     "work_desc_oncolens": "A two-stage cascade classifier reading tumour signal from RNA-Seq expression: healthy tissue against tumour first, then cancer type across five TCGA cohorts. Built for interpretability over raw score.",
-    "work_desc_emotions": "Measuring emotional states with validated instruments and giving back interpretable data on how they change over time, instead of scattered impressions. In development with <a href=\"https://www.alcamasoft.com/\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">AlcamaSoft</a>."
+    "work_desc_emotions": "Measuring emotional states with validated instruments and giving back interpretable data on how they change over time, instead of scattered impressions. In development with <a href=\"https://www.alcamasoft.com/\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">AlcamaSoft</a>.",
+    "lab_notes_p1": "Here you'll find blog posts, project documentation, articles and quick notes that might help someone else. It isn't uniform, and that's the point: a place to create and learn."
   },
   "es": {
     "creativity": "CREATIVIDAD",
@@ -89,6 +90,7 @@
     "work_status_deployed": "Desplegado",
     "work_status_research": "Investigación en curso",
     "work_desc_oncolens": "Un clasificador en cascada de dos etapas que lee la señal tumoral a partir de la expresión de RNA-Seq: primero tejido sano frente a tumor, después el tipo de cáncer entre cinco cohortes de TCGA. Construido priorizando la interpretabilidad sobre la métrica.",
-    "work_desc_emotions": "Medir estados emocionales con instrumentos validados y devolver datos interpretables sobre la propia evolución, en lugar de impresiones sueltas. En desarrollo junto a <a href=\"https://www.alcamasoft.com/\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">AlcamaSoft</a>."
+    "work_desc_emotions": "Medir estados emocionales con instrumentos validados y devolver datos interpretables sobre la propia evolución, en lugar de impresiones sueltas. En desarrollo junto a <a href=\"https://www.alcamasoft.com/\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">AlcamaSoft</a>.",
+    "lab_notes_p1": "Aquí puedes encontrar entradas de blog, documentación de proyectos, artículos y apuntes rápidos que puedan ayudar a otros. No es homogéneo, y esa es la idea: un sitio para crear y aprender."
   }
 }

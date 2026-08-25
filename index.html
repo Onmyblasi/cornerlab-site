@@ -20,8 +20,16 @@
 <body>
 
     <header class="global-branding">
-        <a href="index.html" class="logo">CornerLab</a>
-        <p class="brand-tagline" data-i18n="brand_tagline">Digital lab by Yasira</p>
+        <div class="branding-spacer" aria-hidden="true"></div>
+
+        <div class="branding-center">
+            <a href="index.html" class="logo">CornerLab</a>
+            <p class="brand-tagline" data-i18n="brand_tagline">Digital lab by Yasira</p>
+        </div>
+
+        <button type="button" class="lamp-toggle" aria-label="Cambiar tema" aria-pressed="false">
+            <img src="assets/icons/lamp_opt.svg" alt="" class="lamp-icon">
+        </button>
     </header>
 
     <section class="hero-manifesto">
@@ -172,14 +180,21 @@
 
     <section id="lab-notes" class="editorial-section">
         <h2 class="section-title" data-i18n="section_lab_notes">Lab Notes</h2>
-        <div id="dynamic-notes-target" class="notes-archive">
-            <noscript>
-                <div class="note-row-fallback">
-                <!--<a href="lab/building-systems-for-better-thinking.html"><span>LAB NOTE / 001</span><span>Building Systems for Better Thinking</span></a>
-                    <a href="lab/psychology-of-attention.html"><span>LAB NOTE / 002</span><span>The Psychology of Attention</span></a>
-                    <a href="lab/patterns-in-human-behavior.html"><span>LAB NOTE / 003</span><span>Patterns in Human Behavior</span></a>-->
-                </div>
-            </noscript>
+        <div class="section-content editorial-prose">
+            <div class="editorial-prose lab-notes-intro">
+                <p class="body-text" data-i18n="lab_notes_p1">
+                    Here you'll find blog posts, project documentation, articles and quick notes that might help someone else. It isn't uniform, and that's the point: a place to create and learn.
+                </p>
+            </div>
+            <div id="dynamic-notes-target" class="notes-archive">
+                <noscript>
+                    <div class="note-row-fallback">
+                    <!--<a href="lab/building-systems-for-better-thinking.html"><span>LAB NOTE / 001</span><span>Building Systems for Better Thinking</span></a>
+                        <a href="lab/psychology-of-attention.html"><span>LAB NOTE / 002</span><span>The Psychology of Attention</span></a>
+                        <a href="lab/patterns-in-human-behavior.html"><span>LAB NOTE / 003</span><span>Patterns in Human Behavior</span></a>-->
+                    </div>
+                </noscript>
+            </div>
         </div>
     </section>
 

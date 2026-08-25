@@ -164,9 +164,35 @@ const ContactForm = {
     }
 };
 
+const ThemeToggle = {
+    init() {
+        const button = document.querySelector('.lamp-toggle');
+        if (!button) return;
+
+        const saved = localStorage.getItem('cornerlab-theme');
+        if (saved === 'light') this.apply('light', button);
+
+        button.addEventListener('click', () => {
+            const current = document.documentElement.dataset.theme;
+            this.apply(current === 'light' ? 'dark' : 'light', button);
+        });
+    },
+
+    apply(theme, button) {
+        if (theme === 'light') {
+            document.documentElement.dataset.theme = 'light';
+        } else {
+            delete document.documentElement.dataset.theme;
+        }
+        localStorage.setItem('cornerlab-theme', theme);
+        button.setAttribute('aria-pressed', theme === 'light');
+    }
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
     ArchiveManager.init();
     ContactForm.init();
+    ThemeToggle.init();
     await InteractionEngine.init();
 });
 

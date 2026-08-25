@@ -6,6 +6,8 @@
     --bg-primary: #101010;
     --bg-secondary: #1A1A1A;
     --bg-tertiary: #202020;
+    --bg-page: #000000;
+    --bg-card: #ECECEC;
     
     --text-primary: #F2F2F2;
     --text-secondary: #B3B3B3;
@@ -19,6 +21,14 @@
     --grid-gap: 2rem;
 }
 
+html[data-theme="light"] {
+    --bg-page: #f8f6eb;
+    --bg-card: #F0EEE6;
+    --text-primary: #141414;
+    --text-secondary: #353333;
+    --text-muted: #666262;
+}
+
 /* Global Reset Base */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -28,7 +38,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: #000000;
+    background-color: var(--bg-page);
     color: var(--text-primary);
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
@@ -460,7 +470,7 @@ a {
 /*Added cards to every section */
 /* ------------------------------------------------------------- */
 .editorial-section {
-    background: #ECECEC;
+    background: var(--bg-card);
     border-radius: 6px;
     padding: 4rem 3.5rem;
     margin-bottom: 1.5rem;
@@ -1037,4 +1047,84 @@ a {
 
 @media (max-width: 1024px) {
     .lab-work-intro { width: 100%; }
+}
+
+.lab-notes-intro {
+    margin-bottom: 3rem;
+    max-width: 42rem;
+}
+
+.global-branding {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8rem;
+}
+
+.branding-spacer {
+    width: 64px;
+    flex-shrink: 0;
+}
+
+.branding-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.lamp-toggle {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    width: 64px;
+    flex-shrink: 0;
+    margin-top: -3rem;
+    transition: color 0.2s ease;
+    margin-right: -10rem;
+}
+
+.lamp-toggle:hover { color: var(--text-secondary); }
+
+/* Tema oscuro: lámpara clara sobre fondo negro */
+.lamp-icon {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(82%);
+    transition: filter 0.3s ease;
+}
+
+.lamp-toggle:hover .lamp-icon {
+    filter: brightness(0) saturate(100%) invert(96%);
+}
+
+/* Tema claro: lámpara oscura sobre fondo claro */
+html[data-theme="light"] .lamp-icon {
+    filter: brightness(0) saturate(100%) invert(15%);
+}
+
+html[data-theme="light"] .lamp-toggle:hover .lamp-icon {
+    filter: brightness(0) saturate(100%) invert(0%);
+}
+
+.lamp-chain { transform-origin: 55.542px 79.179px; }
+
+@media (max-width: 1024px) {
+    .lamp-toggle { margin-right: -2rem; }
+}
+
+@media (max-width: 640px) {
+    .lamp-toggle { margin-right: -1.25rem; }
+}
+
+html[data-theme="light"] .social-icon {
+    filter: brightness(0) saturate(100%) invert(25%);
+}
+
+html[data-theme="light"] .social-link:hover .social-icon {
+    filter: brightness(0) saturate(100%) invert(0%);
 }
