@@ -1128,3 +1128,4 @@ html[data-theme="light"] .social-icon {
 html[data-theme="light"] .social-link:hover .social-icon {
     filter: brightness(0) saturate(100%) invert(0%);
 }
+
