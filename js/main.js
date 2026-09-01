@@ -1,9 +1,16 @@
 /**
  * Handle dynamic asset processing and DOM rendering
  */
+
+/**
+ * Modular Client UX Behavior Management
+ */
+
+
 const ArchiveManager = {
     dataSource: './data/notes.json',
     targetSelector: '#dynamic-notes-target',
+    items: null,
 
     async init() {
         const container = document.querySelector(this.targetSelector);
@@ -12,19 +19,25 @@ const ArchiveManager = {
         try {
             const response = await fetch(this.dataSource);
             if (!response.ok) throw new Error(`HTTP network anomaly status: ${response.status}`);
-            const data = await response.json();
-            
-            this.renderNotesArchive(data, container);
+            this.items = await response.json();
+
+            this.renderNotesArchive(this.items, container);
         } catch (error) {
             console.error('Data pipeline failure:', error);
             container.innerHTML = `<p style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); padding:2rem 0;">Unable to connect to lab notes archive infrastructure.</p>`;
         }
     },
 
+    rerender() {
+        const container = document.querySelector(this.targetSelector);
+        if (!container || !this.items) return;
+        this.renderNotesArchive(this.items, container);
+    },
+
     renderNotesArchive(items, mountPoint) {
-        // Clear SSR or fallback elements safely
         mountPoint.innerHTML = '';
 
+        const lang = document.documentElement.lang === 'es' ? 'es' : 'en';
         const visibles = items.filter(item => item.published);
 
         if (!visibles.length) {
@@ -36,10 +49,12 @@ const ArchiveManager = {
             const anchor = document.createElement('a');
             anchor.href = `lab/${item.slug}`;
             anchor.className = 'note-row';
-            
+
+            const title = lang === 'es' ? item.title_es : item.title_en;
+
             anchor.innerHTML = `
                 <span class="note-index">${item.id}</span>
-                <h3 class="note-heading">${item.title}</h3>
+                <h3 class="note-heading">${title}</h3>
                 <span class="note-action">READ ARCHIVE ↗</span>
             `;
 
@@ -48,9 +63,6 @@ const ArchiveManager = {
     }
 };
 
-/**
- * Modular Client UX Behavior Management
- */
 const InteractionEngine = {
     translations: null,
     currentLang: 'en',
@@ -112,6 +124,8 @@ const InteractionEngine = {
             const map = JSON.parse(el.dataset.i18nHref);
             if (map[lang]) el.href = map[lang];
         });
+
+        ArchiveManager.rerender();
     }
 };
 
@@ -190,7 +204,7 @@ const ThemeToggle = {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
-    ArchiveManager.init();
+    await ArchiveManager.init();
     ContactForm.init();
     ThemeToggle.init();
     await InteractionEngine.init();

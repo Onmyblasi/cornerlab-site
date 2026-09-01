@@ -924,12 +924,14 @@ a {
 }
 
 @media (max-width: 1024px) {
+    .lab-work-intro,
     .lab-work-intro { width: 100%; }
 }
 
 .lab-notes-intro {
+    width: 66.66%;
+    margin-left: auto;
     margin-bottom: 3rem;
-    max-width: 42rem;
 }
 
 
@@ -999,4 +1001,122 @@ html[data-theme="light"] .social-icon {
 html[data-theme="light"] .social-link:hover .social-icon {
     filter: brightness(0) saturate(100%) invert(0%);
 }
+
+
+/* ------------------------------------------------------------- */
+/* Lab notes: página de entrada                                    */
+/* ------------------------------------------------------------- */
+
+.note-page {
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.note-head {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.note-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+}
+
+.note-id,
+.note-date {
+    font-family: var(--font-mono);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    
+}
+
+.note-id { font-size: 0.8rem; color: var(--bg-secondary); }
+.note-date { font-size: 0.65rem; color: #777; }
+
+.note-title {
+    font-family: var(--font-sans);
+    font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: #1A1A1A;
+}
+
+.note-body p {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #1A1A1A;
+    margin-bottom: 1.5rem;
+}
+
+
+.note-body h2 {
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #1A1A1A;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.note-body strong {
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.note-body em {
+    font-style: italic;
+}
+
+.note-body a {
+    color: #1A1A1A;
+    border-bottom: 1px solid #bbb;
+    transition: border-color 0.2s ease;
+}
+
+.note-body a:hover {
+    border-bottom-color: #1A1A1A;
+}
+
+.note-back {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.note-back a {
+    color: #777;
+}
+
+.note-back a:hover {
+    color: #1A1A1A;
+}
+
+@media (max-width: 640px) {
+    .note-head { margin-bottom: 2rem; }
+    
+}
+
+.editorial-section .notes-lang-note {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: #777;
+    margin-top: 1rem;
+}
+
+.editorial-section .note-row:hover { background-color: #e4e4e4; }
+
+
 
