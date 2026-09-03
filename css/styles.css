@@ -1,5 +1,5 @@
 /* Typography Engine Imports */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..500&display=swap');
 
 :root {
     /* Color System Archetype (Matte Dark Matte Slate Palette) */
@@ -1008,9 +1008,11 @@ html[data-theme="light"] .social-link:hover .social-icon {
 /* ------------------------------------------------------------- */
 
 .note-page {
-    max-width: 52rem;
+    max-width: 60rem;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 5.2rem;
+    padding-right: 5.2rem;
 }
 
 .note-head {
@@ -1047,10 +1049,16 @@ html[data-theme="light"] .social-link:hover .social-icon {
     color: #1A1A1A;
 }
 
+.note-body {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+
 .note-body p {
     font-family: var(--font-serif);
-    font-size: 1.05rem;
-    line-height: 1.5;
+    font-size: 1.20rem;
+    line-height: 1.55;
     color: #1A1A1A;
     margin-bottom: 1.5rem;
 }
@@ -1068,7 +1076,7 @@ html[data-theme="light"] .social-link:hover .social-icon {
 
 .note-body strong {
     color: #1A1A1A;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .note-body em {
@@ -1105,7 +1113,8 @@ html[data-theme="light"] .social-link:hover .social-icon {
 
 @media (max-width: 640px) {
     .note-head { margin-bottom: 2rem; }
-    
+    .note-page { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .note-body { padding-left: 0; padding-right: 0; }
 }
 
 .editorial-section .notes-lang-note {
